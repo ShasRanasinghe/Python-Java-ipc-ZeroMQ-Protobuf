@@ -1,7 +1,7 @@
 package com.mycompany.javaclient;
 
-import TORCS_Sensors.Sensor_Message;
-import TORCS_Sensors.Sensor_Message.Sensors;
+import TORCS_Sensors.Sensors_Message;
+import TORCS_Sensors.Sensors_Message.Sensors;
 import com.google.protobuf.InvalidProtocolBufferException;
 import java.net.URL;
 import java.util.Arrays;
@@ -63,7 +63,7 @@ public class FXMLController implements Initializable {
             }
 
             try {
-                message = Sensor_Message.Sensors.parseFrom(update);
+                message = Sensors_Message.Sensors.parseFrom(update);
                 System.out.println(message.toString());
             } catch (InvalidProtocolBufferException ex) {
                 System.out.println("Well that was not supposed to happen");
