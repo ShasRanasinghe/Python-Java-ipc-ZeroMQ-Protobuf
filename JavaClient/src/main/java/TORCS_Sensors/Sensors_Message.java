@@ -82,13 +82,13 @@ public final class Sensors_Message {
     int getFocus();
 
     /**
-     * <code>optional float angel = 8;</code>
+     * <code>optional float angle = 8;</code>
      */
-    boolean hasAngel();
+    boolean hasAngle();
     /**
-     * <code>optional float angel = 8;</code>
+     * <code>optional float angle = 8;</code>
      */
-    float getAngel();
+    float getAngle();
 
     /**
      * <code>optional float cuLapTime = 9;</code>
@@ -254,7 +254,7 @@ public final class Sensors_Message {
       meta_ = 0;
       clutch_ = 0F;
       focus_ = 0;
-      angel_ = 0F;
+      angle_ = 0F;
       cuLapTime_ = 0F;
       damage_ = 0;
       distFromStart_ = 0F;
@@ -334,7 +334,7 @@ public final class Sensors_Message {
             }
             case 69: {
               bitField0_ |= 0x00000080;
-              angel_ = input.readFloat();
+              angle_ = input.readFloat();
               break;
             }
             case 77: {
@@ -555,19 +555,19 @@ public final class Sensors_Message {
       return focus_;
     }
 
-    public static final int ANGEL_FIELD_NUMBER = 8;
-    private float angel_;
+    public static final int ANGLE_FIELD_NUMBER = 8;
+    private float angle_;
     /**
-     * <code>optional float angel = 8;</code>
+     * <code>optional float angle = 8;</code>
      */
-    public boolean hasAngel() {
+    public boolean hasAngle() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
     /**
-     * <code>optional float angel = 8;</code>
+     * <code>optional float angle = 8;</code>
      */
-    public float getAngel() {
-      return angel_;
+    public float getAngle() {
+      return angle_;
     }
 
     public static final int CULAPTIME_FIELD_NUMBER = 9;
@@ -846,7 +846,7 @@ public final class Sensors_Message {
         output.writeInt32(7, focus_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        output.writeFloat(8, angel_);
+        output.writeFloat(8, angle_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         output.writeFloat(9, cuLapTime_);
@@ -935,7 +935,7 @@ public final class Sensors_Message {
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(8, angel_);
+          .computeFloatSize(8, angle_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1060,12 +1060,12 @@ public final class Sensors_Message {
         result = result && (getFocus()
             == other.getFocus());
       }
-      result = result && (hasAngel() == other.hasAngel());
-      if (hasAngel()) {
+      result = result && (hasAngle() == other.hasAngle());
+      if (hasAngle()) {
         result = result && (
-            java.lang.Float.floatToIntBits(getAngel())
+            java.lang.Float.floatToIntBits(getAngle())
             == java.lang.Float.floatToIntBits(
-                other.getAngel()));
+                other.getAngle()));
       }
       result = result && (hasCuLapTime() == other.hasCuLapTime());
       if (hasCuLapTime()) {
@@ -1216,10 +1216,10 @@ public final class Sensors_Message {
         hash = (37 * hash) + FOCUS_FIELD_NUMBER;
         hash = (53 * hash) + getFocus();
       }
-      if (hasAngel()) {
-        hash = (37 * hash) + ANGEL_FIELD_NUMBER;
+      if (hasAngle()) {
+        hash = (37 * hash) + ANGLE_FIELD_NUMBER;
         hash = (53 * hash) + java.lang.Float.floatToIntBits(
-            getAngel());
+            getAngle());
       }
       if (hasCuLapTime()) {
         hash = (37 * hash) + CULAPTIME_FIELD_NUMBER;
@@ -1445,7 +1445,7 @@ public final class Sensors_Message {
         bitField0_ = (bitField0_ & ~0x00000020);
         focus_ = 0;
         bitField0_ = (bitField0_ & ~0x00000040);
-        angel_ = 0F;
+        angle_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000080);
         cuLapTime_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000100);
@@ -1538,7 +1538,7 @@ public final class Sensors_Message {
         if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
           to_bitField0_ |= 0x00000080;
         }
-        result.angel_ = angel_;
+        result.angle_ = angle_;
         if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
           to_bitField0_ |= 0x00000100;
         }
@@ -1673,8 +1673,8 @@ public final class Sensors_Message {
         if (other.hasFocus()) {
           setFocus(other.getFocus());
         }
-        if (other.hasAngel()) {
-          setAngel(other.getAngel());
+        if (other.hasAngle()) {
+          setAngle(other.getAngle());
         }
         if (other.hasCuLapTime()) {
           setCuLapTime(other.getCuLapTime());
@@ -1978,34 +1978,34 @@ public final class Sensors_Message {
         return this;
       }
 
-      private float angel_ ;
+      private float angle_ ;
       /**
-       * <code>optional float angel = 8;</code>
+       * <code>optional float angle = 8;</code>
        */
-      public boolean hasAngel() {
+      public boolean hasAngle() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
-       * <code>optional float angel = 8;</code>
+       * <code>optional float angle = 8;</code>
        */
-      public float getAngel() {
-        return angel_;
+      public float getAngle() {
+        return angle_;
       }
       /**
-       * <code>optional float angel = 8;</code>
+       * <code>optional float angle = 8;</code>
        */
-      public Builder setAngel(float value) {
+      public Builder setAngle(float value) {
         bitField0_ |= 0x00000080;
-        angel_ = value;
+        angle_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional float angel = 8;</code>
+       * <code>optional float angle = 8;</code>
        */
-      public Builder clearAngel() {
+      public Builder clearAngle() {
         bitField0_ = (bitField0_ & ~0x00000080);
-        angel_ = 0F;
+        angle_ = 0F;
         onChanged();
         return this;
       }
@@ -2592,7 +2592,7 @@ public final class Sensors_Message {
       "Sensors\022\r\n\005accel\030\001 \001(\002\022\020\n\010breaking\030\002 \001(\002" +
       "\022\014\n\004gear\030\003 \001(\005\022\r\n\005steer\030\004 \001(\002\022\014\n\004meta\030\005 " +
       "\001(\005\022\016\n\006clutch\030\006 \001(\002\022\r\n\005focus\030\007 \001(\005\022\r\n\005an" +
-      "gel\030\010 \001(\002\022\021\n\tcuLapTime\030\t \001(\002\022\016\n\006damage\030\n" +
+      "gle\030\010 \001(\002\022\021\n\tcuLapTime\030\t \001(\002\022\016\n\006damage\030\n" +
       " \001(\005\022\025\n\rdistFromStart\030\013 \001(\002\022\032\n\022totalDist" +
       "FromStart\030\014 \001(\002\022\021\n\tdistRaced\030\r \001(\002\022\014\n\004fu" +
       "el\030\016 \001(\002\022\023\n\013lastLapTime\030\017 \001(\002\022\017\n\007racePos" +
@@ -2618,7 +2618,7 @@ public final class Sensors_Message {
     internal_static_TORCS_Sensors_Sensors_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TORCS_Sensors_Sensors_descriptor,
-        new java.lang.String[] { "Accel", "Breaking", "Gear", "Steer", "Meta", "Clutch", "Focus", "Angel", "CuLapTime", "Damage", "DistFromStart", "TotalDistFromStart", "DistRaced", "Fuel", "LastLapTime", "RacePos", "Rpm", "SpeedX", "SpeedY", "SpeedZ", "DistToMiddle", "PosZ", "Fps", "Count", });
+        new java.lang.String[] { "Accel", "Breaking", "Gear", "Steer", "Meta", "Clutch", "Focus", "Angle", "CuLapTime", "Damage", "DistFromStart", "TotalDistFromStart", "DistRaced", "Fuel", "LastLapTime", "RacePos", "Rpm", "SpeedX", "SpeedY", "SpeedZ", "DistToMiddle", "PosZ", "Fps", "Count", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

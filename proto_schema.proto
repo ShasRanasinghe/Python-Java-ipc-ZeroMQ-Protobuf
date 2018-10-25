@@ -12,7 +12,7 @@ message Sensors {
 	optional int32 meta = 5;
 	optional float clutch = 6;
 	optional int32 focus = 7;
-	optional float angel = 8;
+	optional float angle = 8;
 	optional float cuLapTime = 9;
 	optional int32 damage = 10;
 	optional float distFromStart = 11;
